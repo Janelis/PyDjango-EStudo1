@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- Header com o nome da lista -->
+<h3>{{ title }}</h3>
+<div>
+    <div>
+        <!-- Abre form para submeter os dados -->
+        <form method="post">
+            <!-- Token de seguranca do Django - Cross-site request forgery  -->
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input
+                value="Salvar"
+                type="submit">
+            <input
+                value="Cancelar"
+                type="button"
+                onclick="location.href='{% url "index" %}';">
+        </form>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!--todolist_confirm_delete.html-->
+
+<h3>Deletar lista</h3>
+
+<p>Tem certeza que deseja deletar a lista <i>{{ object.title }}</i>?</p>
+
+<form method="POST">
+    {% csrf_token %}
+    <input
+        value="Sim, delete."
+        type="submit">
+</form>
+<input
+    value="Cancelar"
+    type="button"
+    onclick="location.href='{% url "index" %}';">
+
+{% endblock %}

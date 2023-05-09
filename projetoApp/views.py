@@ -2,9 +2,9 @@ from django.shortcuts import render
 
 # Create your views here.
 
-from django.views.generic import ListView, CreateView, UpdateView
+from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from .models import ToDoList, ToDoItem
-from django.urls import reverse
+from django.urls import reverse, reverse_lazy
 
 
 #Classe responsavel por as listas de afazeres na forma de lista. Funcao ja sabe puxar uma lista de objetos da db pelo ListView importado anteriormente
@@ -15,7 +15,7 @@ class ModelListView(ListView):
 #Classe responsavel por mostrar items dentro de uma lista na forma de lista.
 class ItemListView(ListView):
     model = ToDoItem
-    template_name = "todo_app/todo_list.html"
+    template_name = "projetoApp/todo_list.html"
 
     #Redefine a funcao get_queryset para usar os objetos filtrados 
     def get_queryset(self):
@@ -32,7 +32,7 @@ class ListCreate(CreateView):
     model = ToDoList
     fields = ["title"]
 
-    def get_context_data(self):
+    def get_context_data(self, **kwargs):
         context = super(ListCreate, self).get_context_data()
         context["title"] = "Add a new list"
         return context
@@ -53,7 +53,7 @@ class ItemCreate(CreateView):
         initial_data["todo_list"] = todo_list
         return initial_data
 
-    def get_context_data(self):
+    def get_context_data(self, **kwargs):
         context = super(ItemCreate, self).get_context_data()
         todo_list = ToDoList.objects.get(id=self.kwargs["list_id"])
         context["todo_list"] = todo_list
@@ -81,3 +81,19 @@ class ItemUpdate(UpdateView):
 
     def get_success_url(self):
         return reverse("list", args=[self.object.todo_list_id])
+    
+    
+class ListDelete(DeleteView):
+    model = ToDoList
+    success_url = reverse_lazy("index")
+
+class ItemDelete(DeleteView):
+    model = ToDoItem
+    
+    def get_success_url(self):
+        return reverse_lazy("list", args=[self.kwargs["list_id"]])
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["todo_list"] = self.object.todo_list
+        return context
