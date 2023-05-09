@@ -34,7 +34,7 @@ class ListCreate(CreateView):
 
     def get_context_data(self, **kwargs):
         context = super(ListCreate, self).get_context_data()
-        context["title"] = "Add a new list"
+        context["title"] = "Nova lista"
         return context
 
 #Classe responsavel pela criacao de novos items
@@ -57,7 +57,7 @@ class ItemCreate(CreateView):
         context = super(ItemCreate, self).get_context_data()
         todo_list = ToDoList.objects.get(id=self.kwargs["list_id"])
         context["todo_list"] = todo_list
-        context["title"] = "Create a new item"
+        context["title"] = "Criar um novo item"
         return context
 
     def get_success_url(self):
@@ -76,7 +76,7 @@ class ItemUpdate(UpdateView):
     def get_context_data(self):
         context = super(ItemUpdate, self).get_context_data()
         context["todo_list"] = self.object.todo_list
-        context["title"] = "Edit item"
+        context["title"] = "Editar item"    
         return context
 
     def get_success_url(self):
