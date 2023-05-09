@@ -1,1 +1,44 @@
 Projeto de To-do list com Django, estudo realizado ~05/2023
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+          
+# Django To-do List - Lista de tarefas com Django
+
+### Tecnologias Usadas:
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+<2 class="devicon-django-plain colored"></2>
+
+> Projeto capaz de realizar um CRUD completo para listas com itens individuais. Feito usando Django e seu banco de dados padrão SQLite3
+
+### Ajustes e melhorias
+
+O projeto foi realizado como estudo e cumpriu as seguintes etapas:
+
+- [x] Entendimento de python básico
+- [x] Compreensão do básico do framework Django
+- [x] Uso de banco de dados pelo framework
+- [x] Uso básico de Templates
+- [x] Uso básico de Models
+- [x] Implementação de Classes e Métodos genéricos
+
+## 💻 Pré-requisitos
+
+* Para que o projeto funcione, basta instalar a versão atual do Django:
+
+
+## ☕ Utilização
+
+Projeto possui interface intuitiva e simples, utilizando a base SimpleCSS
+Botões explícitos executam as ações:
+
+* Criar nova lista
+* Acessar lista
+* Adicionar item à lista
+* Atualizar dados de um item
+* Remover itens
+* Remover listas, removendo seus itens automaticamente
+
+## 😄 Fale Comigo!<br>
+
+Quer conversar sobre o projeto ou sobre meu perfil profissional? Clique [AQUI](CONTRIBUTING.md) e me mande uma mensagem!
