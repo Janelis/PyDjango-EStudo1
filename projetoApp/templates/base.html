@@ -1,0 +1,35 @@
+<!-- pydjango-estudo1/projetoApp/templates/base.html -->
+<!-- COPIADO DE TUTORIAL -->
+<!-- Base template -->
+
+<!-- tipo e linguagem do doc -->
+<!doctype html>
+<html lang="en">
+
+<!-- Codificacao de caracteres; meta=viewport diz que mostrara o conteudo na tela -->
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Simple.css. Importa a lib simpleCSS pra ficar bonito-->
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <!-- cabecalho da pagina -->
+    <title>Django To-do Lists</title>
+</head>
+
+<!-- corpo da pagina  -->
+<body>
+    <div>
+        <!-- evento onclick para a cabeca da pagina retornar para a principal (index.html) -->
+        <h1 onclick="location.href='{% url "index" %}'">
+            Django To-do Lists
+        </h1>
+    </div>
+    <div>
+        {% block content %}
+        This content will be replaced by different html code for each page.
+        {% endblock %}
+    </div>
+</body>
+
+</html>
