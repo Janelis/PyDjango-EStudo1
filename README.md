@@ -9,7 +9,7 @@
 Projeto que implementa um CRUD completo para listas com itens individuais. Feito usando Django e seu banco de dados padrão SQLite3
 Realizado 05/2023
 
-### Ajustes e melhorias
+### Habilidades desenvolvidas
 
 O projeto foi realizado como estudo e cumpriu as seguintes etapas:
 
