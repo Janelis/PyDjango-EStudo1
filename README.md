@@ -22,7 +22,7 @@ O projeto foi realizado como estudo e cumpriu as seguintes etapas:
 
 ## 💻 Pré-requisitos
 
-* Para que o projeto funcione, basta instalar a versão atual do Django:
+Para que o projeto funcione, basta instalar a versão atual do Django
 
 
 ## ☕ Utilização
