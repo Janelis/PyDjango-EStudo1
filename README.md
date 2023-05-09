@@ -1,25 +1,24 @@
-Projeto de To-do list com Django, estudo realizado ~05/2023
-
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-          
+
 # Django To-do List - Lista de tarefas com Django
 
 ### Tecnologias Usadas:
 
-[![My Skills](https://skillicons.dev/icons?i=py,django,github&theme=light)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=py,django,git,github,sqlite&theme=light)]()
 
-> Projeto capaz de realizar um CRUD completo para listas com itens individuais. Feito usando Django e seu banco de dados padrão SQLite3
+Projeto capaz de realizar um CRUD completo para listas com itens individuais. Feito usando Django e seu banco de dados padrão SQLite3
+Realizado 05/2023
 
 ### Ajustes e melhorias
 
 O projeto foi realizado como estudo e cumpriu as seguintes etapas:
 
-- [x] Entendimento de python básico
-- [x] Compreensão do básico do framework Django
-- [x] Uso de banco de dados pelo framework
-- [x] Uso básico de Templates
-- [x] Uso básico de Models
-- [x] Implementação de Classes e Métodos genéricos
+* Entendimento de python básico
+* Compreensão do básico do framework Django
+* Uso de banco de dados pelo framework
+* Uso básico de Templates
+* Uso básico de Models
+* Implementação de Classes e Métodos genéricos
 
 ## 💻 Pré-requisitos
 
