@@ -6,8 +6,7 @@ Projeto de To-do list com Django, estudo realizado ~05/2023
 
 ### Tecnologias Usadas:
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-<2 class="devicon-django-plain colored"></2>
+[![My Skills](https://skillicons.dev/icons?i=py,django,github&theme=light)](https://skillicons.dev)
 
 > Projeto capaz de realizar um CRUD completo para listas com itens individuais. Feito usando Django e seu banco de dados padrão SQLite3
 
@@ -41,4 +40,4 @@ Botões explícitos executam as ações:
 
 ## 😄 Fale Comigo!<br>
 
-Quer conversar sobre o projeto ou sobre meu perfil profissional? Clique [AQUI](CONTRIBUTING.md) e me mande uma mensagem!
+Quer conversar sobre o projeto ou sobre meu perfil profissional? Clique [AQUI](https://www.linkedin.com/in/leojanela/) e me mande uma mensagem!
