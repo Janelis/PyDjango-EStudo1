@@ -1,0 +1,35 @@
+<!-- pydjango-estudo1/projetoApp/templates/projetoApp/index.html -->
+<!-- pagina base que roda apos o script {% block content %} -->
+
+<!-- blocos {% ___ %} permitem adicao de codigo pythonico -->
+<!-- extende o html principal base, adicionando o conteudo entre a parte "block content" -->
+{% extends "base.html" %}
+
+<!-- inicia o bloco -->
+{% block content %}
+
+<!--index.html-->
+<!-- if pythonico -->
+{% if object_list %}
+<h3>All my lists</h3>
+
+<!-- precisa de finalizadores!!! -->
+{% endif %}
+
+<ul>
+    {% for todolist in object_list %}
+    <li>
+        <div
+            role="button"
+            onclick="location.  href='{% url "list" todolist.id %}'">
+
+            <!-- chamada sintaxe bigode, chaves duplas denotam que o elemento vai mostar o valor da variavel dentro -->
+            {{ todolist.title }}
+        </div>
+    </li>
+    {% empty %}
+    <h4>You have no lists!</h4>
+    {% endfor %}
+</ul>
+
+{% endblock %}
