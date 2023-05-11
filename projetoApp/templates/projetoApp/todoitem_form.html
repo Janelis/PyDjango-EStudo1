@@ -6,7 +6,24 @@
 <form method="post">
     {% csrf_token %}
     <table>
-        {{ form.as_table }}
+        {% for field in form %}
+            <tr>
+                <th>
+                    {% if field.name == 'title' %}
+                        Título
+                    {% elif field.name == 'todo_list' %}
+                        Lista
+                    {% elif field.name == 'description' %}
+                        Descrição
+                    {% elif field.name == 'due_date' %}
+                        Prazo
+                    {% else %}
+                        {{ field.label_tag }}
+                    {% endif %}
+                </th>
+                <td>{{ field }}</td>
+            </tr>
+        {% endfor %}
     </table>
     <input
         value="Confirmar"
